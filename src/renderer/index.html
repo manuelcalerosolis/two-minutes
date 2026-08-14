@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two Minutes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="titlebar">
+      <div class="brand"><span class="mark">2</span><span>Two Minutes</span></div>
+      <div class="window-actions">
+        <button id="minimize" aria-label="Minimize">−</button>
+        <button id="close" aria-label="Close">×</button>
+      </div>
+    </header>
+
+    <section class="timer-card">
+      <div id="status" class="status"><span class="dot"></span><span>Ready</span></div>
+      <output id="time" class="time">2:00</output>
+      <p id="hint" class="hint">Type or click to begin</p>
+      <button id="rearm" class="primary" hidden>Ready again</button>
+    </section>
+
+    <button id="settingsToggle" class="settings-toggle">Settings <span>⌄</span></button>
+    <section id="settings" class="settings" hidden>
+      <label>Minutes <input id="minutes" type="number" min="0.25" max="60" step="0.25"></label>
+      <label>Sound
+        <select id="sound"><option value="bell">Bell</option><option value="soft">Soft</option><option value="digital">Digital</option></select>
+      </label>
+      <label>Volume <input id="volume" type="range" min="0" max="1" step="0.05"></label>
+    </section>
+
+    <p id="permission" class="permission" hidden>Global keyboard access needs permission. Run the included Linux permission installer, then sign in again.</p>
+    <footer>Private by design · Works locally</footer>
+  </main>
+  <script src="timer.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
