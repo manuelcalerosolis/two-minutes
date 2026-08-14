@@ -1,5 +1,22 @@
 node_modules/
 dist/
+coverage/
+.cache/
+tmp/
+temp/
 *.log
+*.tmp
+*.swp
+*.swo
 .DS_Store
 
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
